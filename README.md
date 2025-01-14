@@ -29,7 +29,7 @@ def test_login_empty_username():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Username must be at least 5 characters long", "Thông báo lỗi không chính xác khi username để trống"
+    assert error_msg == "Username must be at least 5 characters long"
     driver.quit()
 
 # Kiểm thử đăng nhập với trường password để trống
@@ -42,7 +42,7 @@ def test_login_empty_password():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Password must be at least 5 characters long", "Thông báo lỗi không chính xác khi mật khẩu để trống"
+    assert error_msg == "Password must be at least 5 characters long"
     driver.quit()
 
 # Kiểm thử đăng nhập với username không hợp lệ
@@ -56,7 +56,7 @@ def test_login_invalid_username():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Invalid username or password", "Thông báo lỗi không chính xác khi username không hợp lệ"
+    assert error_msg == "Invalid username or password"
     driver.quit()
 
 # Kiểm thử đăng nhập với mật khẩu không hợp lệ (ít hơn 5 ký tự)
@@ -70,7 +70,7 @@ def test_login_invalid_password():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Password must be at least 5 characters long", "Thông báo lỗi không chính xác khi mật khẩu không hợp lệ"
+    assert error_msg == "Password must be at least 5 characters long"
     driver.quit()
 
 # Kiểm thử đăng nhập với cả username và password để trống
@@ -82,7 +82,7 @@ def test_login_empty_credentials():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Username and password cannot be empty", "Thông báo lỗi không chính xác khi cả username và password để trống"
+    assert error_msg == "Username and password cannot be empty"
     driver.quit()
 ```
 ## Dependencies
