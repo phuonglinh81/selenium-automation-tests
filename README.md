@@ -35,7 +35,7 @@ def test_login_empty_username():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Username must be at least 5 characters long"
+    assert error_msg == "Username cannot be empty", "Thông báo lỗi không chính xác khi username để trống"
     driver.quit()
 
 # Kiểm thử đăng nhập với trường password để trống
@@ -48,7 +48,7 @@ def test_login_empty_password():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Password must be at least 5 characters long"
+    assert error_msg == "Password cannot be empty", "Thông báo lỗi không chính xác khi mật khẩu để trống"
     driver.quit()
 
 # Kiểm thử đăng nhập với username không hợp lệ
@@ -62,7 +62,7 @@ def test_login_invalid_username():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Invalid username or password"
+    assert error_msg == "Invalid username or password", "Thông báo lỗi không chính xác khi username không hợp lệ"
     driver.quit()
 
 # Kiểm thử đăng nhập với mật khẩu không hợp lệ (ít hơn 5 ký tự)
@@ -76,7 +76,7 @@ def test_login_invalid_password():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Password must be at least 5 characters long"
+    assert error_msg == "Password must be at least 5 characters long", "Thông báo lỗi không chính xác khi mật khẩu không hợp lệ"
     driver.quit()
 
 # Kiểm thử đăng nhập với cả username và password để trống
@@ -88,7 +88,7 @@ def test_login_empty_credentials():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Username and password cannot be empty"
+    assert error_msg == "Username and password cannot be empty", "Thông báo lỗi không chính xác khi cả username và password để trống"
     driver.quit()
 ```
 ## Dependencies
@@ -105,8 +105,8 @@ Tests are executed in a local environment with results displayed in the console.
 | Test Case                                      | Result  | Notes                                                             |
 |------------------------------------------------|---------|-------------------------------------------------------------------|
 | 1. Successful login                            | Passed  | Redirects to `products.html`                                       |
-| 2. Empty username field                        | Passed  | Displays error message: "Username must be at least 5 characters long" |
-| 3. Empty password field                        | Passed  | Displays error message: "Password must be at least 5 characters long" |
+| 2. Empty username field                        | Passed  | Displays error message: "Username cannot be empty" |
+| 3. Empty password field                        | Passed  | Displays error message: "Password cannot be empty" |
 | 4. Invalid username (unregistered user)        | Passed  | Displays error message: "Invalid username or password"            |
 | 5. Invalid password (less than 5 characters)   | Passed  | Displays error message: "Password must be at least 5 characters long" |
 | 6. Both username and password empty            | Passed  | Displays error message: "Username and password cannot be empty"   |
