@@ -2,7 +2,13 @@
 ## Overview
 This is a Selenium test suite for a web application with login functionality. The purpose of this test suite is to ensure that the login features of the application work correctly, covering both valid and invalid cases for username and password.
 ## Test Cases
-The test suite verifies the accuracy of the login process by checking several scenarios. It includes tests for successful login with valid username and password, as well as cases where the username or password fields are left empty. It also tests scenarios with an invalid username (unregistered user) and an invalid password (password less than 5 characters). These tests ensure that the application provides accurate error messages and validates user input fields during the login process.
+This test suite verifies the correctness and reliability of the login functionality in various scenarios. The following test cases have been implemented to ensure that the system correctly handles different user inputs and displays appropriate error messages:
+- Test Successful Login: Validates that a user can log in successfully when both the username ("user1") and password ("12345") are entered correctly. The test checks that the user is redirected to the products page (pages/products.html).
+- Test Empty Username: Verifies that an error message is displayed when the username field is left empty. The error message should be: "Username must be at least 5 characters long."
+- Test: Empty Password: Verifies that an error message is displayed when the password field is left empty. The error message should be: "Password must be at least 5 characters long."
+- Test: Invalid Username: Tests the login with an invalid (unregistered) username ("user123"). The system should display the error message: "Invalid username or password."
+- Test: Invalid Password: Verifies that the system displays an error message ("Password must be at least 5 characters long") when the entered password is less than 5 characters (e.g., "123").
+- Test Empty Credentials (Both Username and Password): Checks that when both the username and password fields are left empty, the system shows the error message: "Username and password cannot be empty."
 ```python
 # Kiểm thử đăng nhập thành công
 def test_login_success():
@@ -95,6 +101,16 @@ This will install the Selenium package required to interact with the web browser
 Tests are executed in a local environment with results displayed in the console. Successful test passes will be shown, along with assertions for error handling.
 
 ![image](https://github.com/user-attachments/assets/1cf381c9-20a4-4d4d-9a35-f17d53aba08d)
+
+| Test Case                                      | Result  | Notes                                                             |
+|------------------------------------------------|---------|-------------------------------------------------------------------|
+| 1. Successful login                            | Passed  | Redirects to `products.html`                                       |
+| 2. Empty username field                        | Passed  | Displays error message: "Username must be at least 5 characters long" |
+| 3. Empty password field                        | Passed  | Displays error message: "Password must be at least 5 characters long" |
+| 4. Invalid username (unregistered user)        | Passed  | Displays error message: "Invalid username or password"            |
+| 5. Invalid password (less than 5 characters)   | Passed  | Displays error message: "Password must be at least 5 characters long" |
+| 6. Both username and password empty            | Passed  | Displays error message: "Username and password cannot be empty"   |
+
 ## How to Run
 ```bash
 python selenium_test.py
