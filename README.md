@@ -97,6 +97,12 @@ To run the tests, you need to install the necessary dependencies. The primary de
 pip install selenium
 ```
 This will install the Selenium package required to interact with the web browser and perform automated tests.
+## How to Run
+- Run Live Server Extension in Visual Studio Code
+- URL: http://127.0.0.1:5500
+```bash
+python selenium_test.py
+```
 ## Results 
 Tests are executed in a local environment with results displayed in the console. Successful test passes will be shown, along with assertions for error handling.
 - Results
@@ -113,12 +119,6 @@ Tests are executed in a local environment with results displayed in the console.
 | 5. Invalid password (less than 5 characters)   | Passed  | Displays error message: "Password must be at least 5 characters long" |
 | 6. Both username and password empty            | Passed  | Displays error message: "Username and password cannot be empty"   |
 
-## How to Run
-- Run Live Server Extension in Visual Studio Code
-- URL: http://127.0.0.1:5500
-```bash
-python selenium_test.py
-```
 ## Link ChatGPT
 Here is the link to my ChatGPT conversation where an example of running Selenium tests was provided. You can review it to understand the implementation and testing process better.[ChatGPT Example on Selenium](https://chatgpt.com/share/67868f23-0450-8005-943a-68168148bac5). Additionally, I asked ChatGPT to evaluate and grade my automation testing exercises. I made adjustments based on the suggestions provided to improve the results of my tests. Here is the link to my ChatGPT conversation for evaluation and feedback. I got 9/10 [ChatGPT evaluate and grade](https://chatgpt.com/share/6786925d-ca40-8005-a248-bde7597a4e8e)
  
