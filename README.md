@@ -99,9 +99,10 @@ pip install selenium
 This will install the Selenium package required to interact with the web browser and perform automated tests.
 ## Results 
 Tests are executed in a local environment with results displayed in the console. Successful test passes will be shown, along with assertions for error handling.
-
+- Results
+  
 ![image](https://github.com/user-attachments/assets/1cf381c9-20a4-4d4d-9a35-f17d53aba08d)
-
+- Report
 | Test Case                                      | Result  | Notes                                                             |
 |------------------------------------------------|---------|-------------------------------------------------------------------|
 | 1. Successful login                            | Passed  | Redirects to `products.html`                                       |
@@ -112,6 +113,8 @@ Tests are executed in a local environment with results displayed in the console.
 | 6. Both username and password empty            | Passed  | Displays error message: "Username and password cannot be empty"   |
 
 ## How to Run
+- Run Live Server Extension in Visual Studio Code
+- URL: http://127.0.0.1:5500
 ```bash
 python selenium_test.py
 ```
