@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # Thiết lập trình duyệt
 def setup_browser():
@@ -19,7 +21,7 @@ def test_login_success():
     driver.find_element(By.ID, "login-btn").click()
 
     # Xác minh kết quả
-    time.sleep(2)
+    WebDriverWait(driver, 10).until(EC.url_contains("pages/products.html"))
     assert "pages/products.html" in driver.current_url, "Không chuyển đến trang products"
     driver.quit()
 
@@ -77,6 +79,18 @@ def test_login_invalid_password():
     assert error_msg == "Password must be at least 5 characters long", "Thông báo lỗi không chính xác khi mật khẩu không hợp lệ"
     driver.quit()
 
+# Kiểm thử đăng nhập với cả username và password để trống
+def test_login_empty_credentials():
+    driver = setup_browser()
+    driver.get("http://127.0.0.1:5500/pages/index.html")
+
+    driver.find_element(By.ID, "login-btn").click()
+
+    # Xác minh thông báo lỗi
+    error_msg = driver.find_element(By.ID, "error-message").text
+    assert error_msg == "Username and password cannot be empty", "Thông báo lỗi không chính xác khi cả username và password để trống"
+    driver.quit()
+
 # Chạy tất cả các kịch bản kiểm thử
 if __name__ == "__main__":
     all_tests = [
@@ -85,6 +99,7 @@ if __name__ == "__main__":
         test_login_empty_password,
         test_login_invalid_username,
         test_login_invalid_password,
+        test_login_empty_credentials,
     ]
 
     passed_tests = 0

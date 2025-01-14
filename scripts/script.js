@@ -19,6 +19,12 @@ document.getElementById('login-form')?.addEventListener('submit', function (even
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('error-message');
 
+    // Kiểm tra nếu cả 2 ô input đều trống
+    if (username.trim() === '' && password.trim() === '') {
+        errorMessage.textContent = 'Username and password cannot be empty';
+        return;
+    }
+
     // Kiểm tra nếu username và password có ít nhất 5 ký tự
     if (username.length < 5 & password.length < 5) {
         errorMessage.textContent = 'Username and password must be at least 5 characters long';
