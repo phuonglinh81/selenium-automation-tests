@@ -98,11 +98,12 @@ pip install selenium
 ```
 This will install the Selenium package required to interact with the web browser and perform automated tests.
 ## How to Run
-1. **Run the Web Interface:**
+1. ### Run the Web Interface:
 - Run Live Server Extension in Visual Studio Code
 - URL: http://127.0.0.1:5500
-2. **Run the Test Suite:**
-To execute the Selenium test cases, run the following command in your terminal
+  
+2. ### Run the Test Suite:
+  To execute the Selenium test cases, run the following command in your terminal
 ```bash
 python selenium_test.py
 ```
