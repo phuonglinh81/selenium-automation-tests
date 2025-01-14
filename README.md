@@ -9,13 +9,13 @@ To run the tests, you need to install the necessary dependencies. The primary de
 pip install selenium
 ```
 This will install the Selenium package required to interact with the web browser and perform automated tests.
+## Results 
+Tests are executed in a local environment with results displayed in the console. Successful test passes will be shown, along with assertions for error handling.
+![image](https://github.com/user-attachments/assets/c8276c57-c430-443e-aee7-ecb8eb19f57a)
 ## How to Run
 ```bash
 python selenium_test.py
 ```
-## Results 
-Tests are executed in a local environment with results displayed in the console. Successful test passes will be shown, along with assertions for error handling.
-![image](https://github.com/user-attachments/assets/c8276c57-c430-443e-aee7-ecb8eb19f57a)
 ## Link ChatGPT
 Here is the link to my ChatGPT conversation where an example of running Selenium tests was provided. You can review it to understand the implementation and testing process better.[ChatGPT Example on JUnit Testing](https://chatgpt.com/share/67868f23-0450-8005-943a-68168148bac5). Additionally, I asked ChatGPT to evaluate and grade my automation testing exercises. I made adjustments based on the suggestions provided to improve the results of my tests. Here is the link to my ChatGPT conversation for evaluation and feedback. [ChatGPT evaluate and grade](https://chatgpt.com/share/67824d07-cbf0-8005-8b3b-c5c23376b4ea)
  
