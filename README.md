@@ -11,6 +11,7 @@ pip install selenium
 This will install the Selenium package required to interact with the web browser and perform automated tests.
 ## Results 
 Tests are executed in a local environment with results displayed in the console. Successful test passes will be shown, along with assertions for error handling.
+
 ![image](https://github.com/user-attachments/assets/c8276c57-c430-443e-aee7-ecb8eb19f57a)
 ## How to Run
 ```bash
