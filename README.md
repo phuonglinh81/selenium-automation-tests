@@ -103,6 +103,7 @@ Tests are executed in a local environment with results displayed in the console.
   
 ![image](https://github.com/user-attachments/assets/1cf381c9-20a4-4d4d-9a35-f17d53aba08d)
 - Report
+
 | Test Case                                      | Result  | Notes                                                             |
 |------------------------------------------------|---------|-------------------------------------------------------------------|
 | 1. Successful login                            | Passed  | Redirects to `products.html`                                       |
