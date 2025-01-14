@@ -98,7 +98,6 @@ if __name__ == "__main__":
         except AssertionError as e:
             print(f"{test.__name__}: Failed - {e}")
 
-    if passed_tests == total_tests:
-        print(f"✅ {passed_tests}/{total_tests} bài kiểm thử thành công.")
-    else:
-        print(f"✅ {passed_tests}/{total_tests} bài kiểm thử thành công.")
+
+    print(f"✅ {passed_tests}/{total_tests} bài kiểm thử thành công.")
+
