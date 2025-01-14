@@ -6,8 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Thiết lập trình duyệt
 def setup_browser():
-    driver = webdriver.Chrome()  # Bạn có thể thay Firefox bằng Chrome nếu cần
-    driver.implicitly_wait(5)  # Đợi các thành phần tải
+    driver = webdriver.Chrome()  
+    driver.implicitly_wait(5)  
     return driver
 
 # Kiểm thử đăng nhập thành công
@@ -35,7 +35,7 @@ def test_login_empty_username():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Username must be at least 5 characters long", "Thông báo lỗi không chính xác khi username để trống"
+    assert error_msg == "Username cannot be empty", "Thông báo lỗi không chính xác khi username để trống"
     driver.quit()
 
 # Kiểm thử đăng nhập với trường password để trống
@@ -48,7 +48,7 @@ def test_login_empty_password():
 
     # Xác minh thông báo lỗi
     error_msg = driver.find_element(By.ID, "error-message").text
-    assert error_msg == "Password must be at least 5 characters long", "Thông báo lỗi không chính xác khi mật khẩu để trống"
+    assert error_msg == "Password cannot be empty", "Thông báo lỗi không chính xác khi mật khẩu để trống"
     driver.quit()
 
 # Kiểm thử đăng nhập với username không hợp lệ
